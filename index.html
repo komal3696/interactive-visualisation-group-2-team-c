@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Customer Churn Dashboard</title>
+<link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+<!-- 🔥 NAVBAR (MOVED FROM BOTTOM → TOP) -->
+<div class="navbar">
+    <h2 class="logo">Churn Analytics</h2>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Dashboard</a>
+    </div>
+</div>
+
+<!-- 🔥 HERO -->
+<div class="hero">
+    <h1 class="title">Customer Churn Analytics Dashboard</h1>
+    <p class="subtitle">Group Project – Interactive Insights</p>
+
+    <p class="goal">
+        This project explores customer churn behavior using interactive visualisations. 
+        Each team member contributes to a specific analytical dimension to understand why customers leave.
+    </p>
+</div>
+
+<!-- 🔥 FLOW -->
+<p class="flow-line">
+Demographics → Customer Value → Contract → Pricing → Service Insights
+</p>
+
+<!-- 🔥 GRID -->
+<div class="grid">
+
+    <a href="vaishnavi/index.html" class="card">
+        <h2>👤 Vaishnavi — Customer Analyst</h2>
+        <p>Who is leaving? (Demographics)</p>
+        <div class="mini">Higher churn observed among senior customers</div>
+    </a>
+
+    <a href="komal/index.html" class="card">
+        <h2>💰 Komal — Value Analyst</h2>
+        <p>Are valuable customers leaving? (CLV)</p>
+        <div class="mini">Short-tenure customers show higher churn</div>
+    </a>
+
+    <a href="naveen/index.html" class="card">
+        <h2>📄 Naveen — Contract Analyst</h2>
+        <p>Does commitment matter? (Contract)</p>
+        <div class="mini">Month-to-month contracts have highest churn</div>
+    </a>
+
+    <a href="sunny/index.html" class="card">
+        <h2>💳 Sunny — Pricing Analyst</h2>
+        <p>Does pricing affect churn? (Charges)</p>
+        <div class="mini">Higher monthly charges linked to churn</div>
+    </a>
+
+    <a href="gopal/index.html" class="card">
+        <h2>🌐 Gopal — Service Analyst</h2>
+        <p>Does service impact churn? (Internet)</p>
+        <div class="mini">Fiber users show highest churn behavior</div>
+    </a>
+
+</div>
+<script>
+document.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("click", function(e){
+        e.preventDefault();
+
+        // Add animation class
+        document.body.classList.add("fade-out");
+
+        // Navigate after animation
+        setTimeout(() => {
+            window.location.href = this.href;
+        }, 300);
+    });
+});
+</script>
+
+</body>
+</html>
