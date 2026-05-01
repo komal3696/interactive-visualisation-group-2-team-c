@@ -1,0 +1,106 @@
+body{
+margin:0;
+font-family:Arial;
+background:#020617;
+color:white;
+}
+
+.title{
+text-align:center;
+margin:20px;
+font-size:32px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+/* 🔥 UPGRADE: allow side-by-side space */
+@media(min-width:1000px){
+.container{
+max-width:1200px;
+}
+}
+
+.chartBox{
+background:#0b1a33;
+padding:20px;
+border-radius:12px;
+text-align:center;
+width:100%;
+
+/* 🔥 NEW: align properly with insight */
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+}
+
+#chart{
+display:flex;
+justify-content:center;
+}
+
+.insightBox{
+margin-top:20px;
+background:#0b1a33;
+padding:20px;
+border-radius:12px;
+font-size:16px;
+line-height:1.6;
+width:100%;
+}
+
+/* ===== SIDE-BY-SIDE LAYOUT ===== */
+.mainLayout{
+display:grid;
+grid-template-columns: 2fr 1fr;
+gap:20px;
+align-items:stretch;
+}
+
+/* 🔥 FINAL FIX: proper alignment */
+.insightBox{
+display:flex;
+flex-direction:column;
+justify-content:flex-start; /* 🔥 FIXED */
+height:auto;                /* 🔥 FIXED */
+}
+
+/* 🔥 OPTIONAL POLISH */
+.chartBox{
+box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+.insightBox{
+box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.mainLayout{
+grid-template-columns:1fr;
+}
+}
+
+/* ===== ADD GAP BETWEEN CHART & INSIGHT (NO CODE CHANGED) ===== */
+.mainLayout{
+gap:40px !important;        /* 🔥 increase spacing safely */
+align-items:start !important;
+}
+
+/* ===== PREVENT OVERLAP VISUALLY ===== */
+.chartBox{
+margin-right:10px;          /* 🔥 push chart slightly */
+}
+
+.insightBox{
+margin-left:10px;           /* 🔥 push insight slightly */
+}
+
+/* ===== OPTIONAL CLEAN LOOK ===== */
+.chartBox, .insightBox{
+box-sizing:border-box;
+}

@@ -1,0 +1,168 @@
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#020617;
+color:white;
+}
+
+/* TITLE */
+.title{
+text-align:center;
+font-size:32px;
+margin:15px 0;
+}
+
+/* MAIN */
+.main{
+padding:20px;
+display:flex;
+flex-direction:column;
+gap:30px;
+}
+
+/* KPI GRID */
+.kpis{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:15px;
+}
+
+.card{
+padding:15px;
+text-align:center;
+border-radius:12px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px rgba(255,255,255,0.15);
+}
+
+/* COLORS */
+.red{background:#7f1d1d;}
+.green{background:#14532d;}
+.blue{background:#1e3a8a;}
+.orange{background:#7c2d12;}
+.purple{background:#4c1d95;}
+
+/* CONTENT */
+.content{
+display:grid;
+grid-template-columns:220px 1fr;
+gap:20px;
+align-items:center;
+}
+
+/* 🔥 FILTER FIX (ADDED) */
+.sidebar{
+background:#0b1a33;
+padding:20px;
+border-radius:12px;
+height:fit-content;   /* prevents stretching */
+}
+
+/* 🔥 BETTER SPACING INSIDE FILTER */
+.sidebar h2{
+margin-bottom:15px;
+}
+
+.sidebar label{
+display:block;
+margin-bottom:8px;
+}
+
+.sidebar input[type="range"]{
+width:100%;
+margin-top:10px;
+}
+
+/* CHART */
+.chartBox{
+background:transparent;
+padding:10px 0;
+margin-bottom:25px;
+border-bottom:1px solid rgba(255,255,255,0.05);
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+/* 🔥 CENTER TITLE */
+.chartBox h2{
+text-align:center;
+margin-bottom:15px;
+}
+
+/* 🔥 BETTER QUICK INSIGHT LOOK */
+#quickInsight{
+font-size:14px;
+opacity:0.8;
+margin-bottom:10px;
+}
+
+/* CHART ALIGNMENT */
+#chart{
+display:flex;
+justify-content:center;
+align-items:center;
+margin-top:10px;
+}
+
+/* INSIGHTS */
+.bottom{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.bottom div{
+background:#0b1a33;
+padding:18px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+/* DETAIL */
+.cardBox{
+background:#0b1a33;
+padding:15px;
+border-radius:12px;
+margin-top:15px;
+}
+
+/* 🔥 ADD SPACE IN DETAIL PAGE */
+#detailView{
+padding:10px;
+}
+
+/* HIGHLIGHT */
+.highlight{
+font-size:26px;
+color:#22c55e;
+font-weight:bold;
+}
+
+/* BUTTON */
+button{
+padding:10px;
+background:#2563eb;
+border:none;
+color:white;
+border-radius:8px;
+cursor:pointer;
+}
+
+.back-btn{
+padding:6px 12px;
+font-size:14px;
+margin-bottom:10px;
+}
+
+/* SMOOTH TRANSITION */
+#mainView, #detailView{
+transition:0.4s;
+}

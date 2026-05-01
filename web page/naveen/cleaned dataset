@@ -1,0 +1,16 @@
+import pandas as pd
+
+print("Running script...")
+
+df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
+
+print("Dataset loaded:", df.shape)
+
+df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
+df.dropna(inplace=True)
+
+member2 = df[['Contract','tenure','MonthlyCharges','Churn']]
+
+member2.to_csv("member2_contract.csv", index=False)
+
+print("✅ Member 2 CSV created successfully!")

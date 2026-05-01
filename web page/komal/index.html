@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Customer Lifetime Analysis</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+<a href="../index.html" class="home-btn">⬅ Home</a>
+
+
+<h1 class="title">Customer Lifetime Analysis</h1>
+
+<div class="slider-box">
+  Max Tenure: <span id="tenureValue">60</span> months
+  <input type="range" id="tenureSlider" min="1" max="72" value="60">
+</div>
+
+<div class="kpi-container">
+  <div class="kpi-card">
+    <h2 id="totalCustomers"></h2>
+    <p>Total Customers</p>
+  </div>
+  <div class="kpi-card">
+    <h2 id="avgCLV"></h2>
+    <p>Avg Lifetime Value</p>
+  </div>
+</div>
+
+<div class="legend-box">
+  <div><span class="dot green"></span> Month-to-month</div>
+  <div><span class="dot red"></span> Long-term</div>
+</div>
+
+<div id="chart"></div>
+
+<div id="insightText" class="insight-text">
+  Click anywhere on the graph to generate insight
+</div>
+
+<div id="tooltip" class="tooltip"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

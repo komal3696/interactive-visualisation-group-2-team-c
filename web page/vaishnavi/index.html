@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Customer Churn Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+<a href="index.html" class="home-btn">⬅ Home</a>
+
+<h1 class="title">Customer Churn Analysis</h1>
+
+<main class="main">
+
+<!-- KPI ROW -->
+<div class="kpis">
+  <div class="card red"><p>Total</p><h2 id="total"></h2></div>
+  <div class="card green"><p>Filtered</p><h2 id="sample"></h2></div>
+  <div class="card blue"><p>Avg Churn</p><h2 id="avg"></h2></div>
+  <div class="card orange"><p>Risk</p><h2 id="risk"></h2></div>
+  <div class="card purple"><p>Gap</p><h2 id="diff"></h2></div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="mainView">
+
+<div class="content">
+
+  <!-- FILTERS -->
+  <aside class="sidebar">
+    <h2>Filters</h2>
+
+    <label><input type="checkbox" id="seniorToggle" checked> Senior</label><br>
+    <label><input type="checkbox" id="nonToggle" checked> Non-Senior</label>
+
+    <p>Tenure ≤ <span id="tenureValue">72</span></p>
+    <input type="range" id="tenureSlider" min="0" max="72" value="72">
+
+    <button onclick="resetFilters()">Reset</button>
+  </aside>
+
+  <!-- CHART -->
+  <div class="chartBox">
+    <h2>Churn Comparison</h2>
+
+    <!-- 🔥 QUICK INSIGHT (already present, now will work properly) -->
+    <div id="quickInsight" style="text-align:center; margin-bottom:10px;"></div>
+
+    <div id="chart"></div>
+  </div>
+
+</div>
+
+<!-- INSIGHTS -->
+<div class="bottom">
+  <div id="insight"></div>
+  <div id="conclusion"></div>
+</div>
+
+</div>
+
+<!-- DETAIL VIEW -->
+<div id="detailView" style="display:none">
+
+<button class="back-btn" onclick="goBack()">⬅ Back</button>
+
+<h2 id="detailTitle"></h2>
+<div class="highlight" id="detailDesc"></div>
+
+<div class="cardBox">
+<h3>Insight</h3>
+<p id="detailInsight"></p>
+</div>
+
+<div class="cardBox">
+<h3>Recommendation</h3>
+<p id="detailRecommendation"></p>
+</div>
+
+<div class="cardBox">
+<h3>Sub Analysis</h3>
+
+<!-- 🔥 IMPORTANT: this must exist (you already had it ✔️) -->
+<div id="miniChart"></div>
+
+</div>
+
+</div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

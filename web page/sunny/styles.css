@@ -1,0 +1,71 @@
+body {
+    font-family: "Segoe UI", Arial;
+    background: #0f172a;
+    color: #e2e8f0;
+    margin: 0;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.kpi-container {
+    display: flex;
+    gap: 10px;
+}
+
+.kpi-card {
+    flex: 1;
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* 🔥 chart box looks premium now */
+#chart {
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+.details-panel {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.detail-card {
+    background: #334155;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tooltip {
+    position: absolute;
+    background: black;
+    color: white;
+    padding: 6px;
+    display: none;
+    border-radius: 5px;
+}

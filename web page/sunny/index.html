@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Churn Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="../index.html" class="home-btn">⬅ Home</a>
+
+
+<div class="container">
+
+    <h1>Customer Churn & Monthly Charges</h1>
+
+    <div class="kpi-container">
+        <div class="kpi-card">
+            <h3>Total Customers</h3>
+            <p id="totalCustomers">0</p>
+        </div>
+        <div class="kpi-card">
+            <h3>Avg Monthly Charges</h3>
+            <p id="avgCharges">£0</p>
+        </div>
+        <div class="kpi-card">
+            <h3>Churn Rate</h3>
+            <p id="churnRate">0%</p>
+        </div>
+    </div>
+
+    <div class="controls">
+        <label>Contract Filter:</label>
+        <select id="contractFilter">
+            <option value="All">All</option>
+            <option value="Month-to-month">Month-to-month</option>
+            <option value="One year">One year</option>
+            <option value="Two year">Two year</option>
+        </select>
+    </div>
+
+    <div class="main-grid">
+        <div id="chart"></div>
+
+        <div class="details-panel">
+            <h3 id="detailsTitle">Click a box</h3>
+
+            <div class="details-grid">
+                <div class="detail-card"><p>Count</p><h4 id="detailCount">-</h4></div>
+                <div class="detail-card"><p>Average</p><h4 id="detailAvg">-</h4></div>
+                <div class="detail-card"><p>Min</p><h4 id="detailMin">-</h4></div>
+                <div class="detail-card"><p>Max</p><h4 id="detailMax">-</h4></div>
+            </div>
+
+            <div class="contract-breakdown">
+                <h4>Contract Breakdown</h4>
+                <ul id="contractList"></ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+import pandas as pd
+
+# Load dataset
+df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
+# Fix TotalCharges issue
+df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
+
+# Drop null values
+df.dropna(inplace=True)
+
+# Select Member 1 columns
+member1 = df[['gender','SeniorCitizen','Partner','Dependents','tenure','Churn']]
+
+# Save cleaned file
+member1.to_csv("member1_demographics.csv", index=False)
+
+print("Member 1 dataset ready!")

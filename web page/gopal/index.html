@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Internet Service vs Churn</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+<a href="../index.html" class="home-btn">⬅ Home</a>
+<h1 class="title">Internet Service vs Churn Analysis</h1>
+
+<div class="container">
+
+    <div class="mainLayout">
+
+        <!-- CHART -->
+        <div class="chartBox">
+            <h2>Which Service Drives Customer Churn?</h2>
+            <p class="subtitle">Fiber users show higher churn behavior</p>
+
+            <select id="filter">
+                <option value="All">All Services</option>
+                <option value="DSL">DSL</option>
+                <option value="Fiber optic">Fiber optic</option>
+                <option value="No">No Internet</option>
+            </select>
+
+            <div id="kpiBox"></div>
+            <div id="chart"></div>
+        </div>
+
+        <!-- INSIGHT -->
+        <div class="insightBox" id="insight"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

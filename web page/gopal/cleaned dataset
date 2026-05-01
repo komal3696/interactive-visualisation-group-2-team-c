@@ -1,0 +1,15 @@
+import pandas as pd
+
+df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
+
+grouped = df.groupby("InternetService")["Churn"].value_counts(normalize=True).unstack()
+
+grouped = grouped.fillna(0)
+
+grouped.columns = ["No Churn", "Churn"]
+
+grouped.reset_index(inplace=True)
+
+grouped.to_csv("churn_internet.csv", index=False)
+
+print("✅ Member 3 dataset ready!")
